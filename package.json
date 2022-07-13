@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "node",
@@ -14,12 +14,16 @@
     "express",
     "js"
   ],
+  "bin": {
+    "crawl": "./index.js"
+  },
   "author": "akash gautam",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.962.0",
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.12",
+    "commander": "^9.3.0",
     "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
     "csvtojson": "^2.0.10",
