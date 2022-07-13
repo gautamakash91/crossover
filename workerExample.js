@@ -1,4 +1,5 @@
 const { workerData, parentPort } = require('worker_threads')
+const request = require('request');
 
 // console.log('Technical Articles on ' + workerData);
 request(workerData, function (err, res, body) {
