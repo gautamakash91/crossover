@@ -1,11 +1,12 @@
-// const sum = require('./sum');
+const searchDomain = require("../routes/index");
+const responses = require("../constants/response");
 
-describe("-- STARTING TESTS --", ()=>{
-  test('When no parameters have been passed:', () => {
-    // expect(sum(1, 2)).toBe(3);
+describe("-- STARTING TESTS ON SEARCH DOMAIN FUNCTION --", ()=>{
+  test('calling searchDomain with no params', () => {
+    expect(searchDomain()).toBe(responses.invalid);
   });
   
-  test('Correct response:', () => {
-    // expect(sum(1, 2)).toBe(3);
+  test('test with invalid url', () => {
+    expect(searchDomain("amazon")).toBe(responses.invalid);
   });
 })

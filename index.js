@@ -9,11 +9,17 @@ program
   .action((domain, threads) => {
     if (threads.n) {
       //NEED TO CREATE MULTIPLE WORKERS AND PASS DATA TO THEM ONE BY ONE
-      searchDomain(domain);
+      //** WAS NOT ABLE TO COMPLETE THIS PART ** 
+      runSearch(domain);
     } else {
       //NO WORKER THREADS SPECIFIED. PROCEED WITH 1 WORKER. 
-      searchDomain(domain);
+      runSearch(domain);
     }
   })
+
+async function runSearch(domain) {
+  const result = await searchDomain(domain)
+  console.log(result);
+}
 
 program.parse()
