@@ -4,7 +4,7 @@ var searchDomain = require("./src/routes/index");
 
 program
   .command('search <domain>')
-  .description('calling domain without workers')
+  .description('calling domain to search for URLs.')
   .option('-n <threads>', '')
   .action((domain, threads) => {
     if (threads.n) {
